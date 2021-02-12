@@ -1,0 +1,22 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+@import './layout/variables';
+@import './layout/mixin';
+@import './layout/main';
+@import 'normalize.scss';
+@import './base.scss';
+@import './components/cursor';
+@import './components/preloader';
+@import './components/cards';
+@import './components/header';
+@import './components/footer';
+@import './components/detailsPage';
+@import './components/film-library';
+@import './components/modal';
+@import './components/pagination';
+@import './components/to-top-btn';
+@import './components/authorisation';
+@import './components/dark_theme';
+@import './components/scrollbar';
+@import './components/carousel';

@@ -1,0 +1,168 @@
+/*Background-image styles*/
+.header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/header-home-mobile.jpg');
+
+  @include tablet {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/header-home-tablet.jpg');
+  }
+
+  @include desktop {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/header-home-desktop.jpg');
+  }
+}
+.my-library-header {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/header-library-mobile.jpg');
+
+  @include tablet {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/header-library-tablet.jpg');
+  }
+
+  @include desktop {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/header-library-desktop.jpg');
+  }
+}
+/*the end of background-image styles*/
+
+.header-container {
+  position: relative;
+  padding-top: 46px;
+  padding-bottom: 43px;
+}
+@media screen and (min-width: 767px) {
+  .header-container {
+    padding-top: 41px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .text-logo {
+    display: none;
+  }
+}
+.icon-logo {
+  vertical-align: unset;
+}
+.text-logo {
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.166;
+
+  color: $primary-white-color;
+}
+.link-logo:hover {
+  text-decoration: none;
+}
+.link-library {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.166;
+  color: $primary-white-color;
+  background-color: transparent;
+  border: 0;
+  display: block;
+}
+
+.current {
+  border-bottom: 3px solid $accent-color;
+}
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation {
+  margin: auto;
+}
+.header-list {
+  display: flex;
+  list-style: none;
+}
+.header-list-item:not(:first-child) {
+  margin-left: 10px;
+
+  @include tablet {
+    margin-left: 39px;
+  }
+
+  @include desktop {
+    margin-left: 39px;
+  }
+}
+.link-header {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.166;
+
+  color: $primary-white-color;
+}
+
+.search-box {
+  margin: 37px auto 0;
+  position: relative;
+  width: 280px;
+}
+.search-input {
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid #fff;
+  outline: none;
+  width: 100%;
+  color: $primary-white-color;
+}
+::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.166;
+
+  color: $primary-white-color;
+}
+.icon-search {
+  position: absolute;
+  right: 0;
+}
+.error-message {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: red;
+  text-align: left;
+  height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .search-box {
+    width: 336px;
+  }
+  .error-message {
+    font-size: 15px;
+    text-align: center;
+    height: 16px;
+  }
+}
+
+.button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: white;
+  color: white;
+  width: 20px;
+  height: 20px;
+
+  transition: 250ms cubic-bezier(0.47, 0, 0.745, 0.71);
+}

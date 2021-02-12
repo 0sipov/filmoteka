@@ -1,0 +1,245 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.modal__shadow {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    z-index: 98;
+    opacity: 0.6;
+    animation: 0.6s ease 0s 1 modalVisible;
+    transition: opacity 0.15s ease;
+}
+
+.modal-wrap button:focus {
+    outline: 2px solid black;
+}
+
+.modal-wrap {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 320px;
+    max-width: 100%;
+    margin: 50px 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: white;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease 0.01s, opacity 0.3s ease 0.01s;
+    transform: scale(0.9);
+    opacity: 0;
+    overflow: visible;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 6px -6px rgb(236, 236, 236);
+    @include tablet {
+        width: 700px;
+    }
+    @include desktop {
+        width: 1000px;
+    }
+}
+
+.button-close.close-modal {
+    position: absolute;
+    right: 5px;
+}
+
+.modal--active {
+    visibility: visible;
+}
+
+.modal--active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal__opened {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.modal--moved {
+    visibility: visible;
+}
+
+.modal-our_team_list {
+    padding: 15px;
+    @include tablet {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    @include desktop {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+.modal-our_team_item {
+    width: 100%;
+    @include tablet {
+        width: 50%;
+    }
+    @include desktop {
+        width: 25%;
+    }
+}
+
+.modal-our_tem_card-wrapper {
+    padding: 5px;
+}
+
+.modal_window-thumb {
+    background-color: black;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    margin: 0 auto;
+    @include tablet {
+        height: 120px;
+        width: 120px;
+    }
+    @include desktop {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.modal_window-img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    margin: 0 auto;
+    @include tablet {
+        height: 120px;
+        width: 120px;
+    }
+    @include desktop {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.modal-card_btn {
+    background-color: transparent;
+    border: 2px solid $accent-color;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: $accent-color;
+    box-shadow: 0 10px 6px -6px $accent-color;
+    color: $secondary-text-color;
+    font-size: 18px;
+    width: 90%;
+    @include desktop {
+        width: 98%;
+        font-size: 14px;
+    }
+}
+
+.modal-card_btn:hover {
+    cursor: pointer;
+}
+
+@keyframes modalVisible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+#modal_Title {
+    display: inline-block;
+    padding-top: 20px;
+    margin: 0 auto;
+    color: $accent-color;
+    font-size: 30px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    text-shadow: -1px -1px 0 grey, 1px -1px 0 grey, -1px 1px 0 grey, 1px 1px 0 grey;
+    &:after {
+        content: attr(modal_Title);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        overflow: hidden;
+        color: red;
+        transform: translate(0.4vw, 0.3vh);
+        mix-blend-mode: darken;
+        text-align: center;
+        width: 100%;
+        text-shadow: 1px 0px 0px grey, 0px 1px 0px blue, 2px 1px 0px grey, 1px 2px 0px blue, 3px 2px 0px grey, 2px 3px 0px blue, 4px 3px 0px grey, 3px 4px 0px blue, 5px 4px 0px grey, 4px 5px 0px blue, 6px 5px 0px grey, 5px 6px 0px blue, 7px 6px 0px grey;
+    }
+}
+
+.modal-developer_name {
+    display: inline-block;
+    padding-top: 20px;
+    margin: 0 auto;
+    color: $accent-color;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    text-shadow: -1px -1px 0 grey, 1px -1px 0 grey, -1px 1px 0 grey, 1px 1px 0 grey;
+    &:after {
+        content: attr(modal_Title);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        overflow: hidden;
+        color: red;
+        transform: translate(0.4vw, 0.3vh);
+        mix-blend-mode: darken;
+        text-align: center;
+        width: 100%;
+        text-shadow: 1px 0px 0px grey, 0px 1px 0px blue, 2px 1px 0px grey, 1px 2px 0px blue, 3px 2px 0px grey, 2px 3px 0px blue, 4px 3px 0px grey, 3px 4px 0px blue, 5px 4px 0px grey, 4px 5px 0px blue, 6px 5px 0px grey, 5px 6px 0px blue, 7px 6px 0px grey;
+    }
+}
+
+.modal-content.darkTheme {
+    background-color: rgb(40, 40, 40);
+    box-shadow: 0 10px 6px -6px rgb(182, 181, 181);
+}

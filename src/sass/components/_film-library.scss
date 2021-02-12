@@ -1,0 +1,58 @@
+.my-library {
+  display: flex;
+  justify-content: center;
+}
+.library-button {
+  color: $primary-white-color;
+  width: 130.19px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.56);
+  outline: 0px;
+  border: 1px solid $primary-white-color;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-right: 18px;
+}
+.button-active {
+  background-color: $accent-color;
+  border: 1px solid $accent-color;
+}
+.empty-storage {
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+  @include tablet {
+    margin-top: 15px;
+  }
+  @include desktop {
+    margin-top: 15px;
+  }
+}
+
+.btn-delete {
+  position: absolute;
+  top: 10px;
+  right: 9px;
+  fill: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 5px -5px rgba(135, 76, 37, 0.6);
+  transition: 250ms linear;
+  transform: translateX(130%);
+}
+
+.btn-delete:hover {
+  background-color: $accent-color;
+  // fill: white
+  transform: scale(1.04);
+}
+
+.main__movieItem:hover .btn-delete {
+  transform: translateX(-5%);
+}
+
+.my-library-page {
+  padding-bottom: 10px;
+}

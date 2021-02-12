@@ -1,0 +1,23 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" id="heart">
+    <path d="M7 13.188l-.98-.97C2.38 9.03 0 6.88 0 4.248 0 2.097 1.68.435 3.85.435A4.23 4.23 0 017 1.89 4.224 4.224 0 0110.15.436C12.32.436 14 2.099 14 4.247c0 2.634-2.38 4.783-6.02 7.97l-.98.971z" fill="#FF6B08"></path>
+  </symbol>
+    <symbol viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrowleft">
+    <path d="M12.6667 8H3.33337" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.00004 12.6667L3.33337 8.00004L8.00004 3.33337" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrowright">
+    <path d="M3.33329 8H12.6666" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7.99996 12.6666L12.6666 7.99998L7.99996 3.33331" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="login">
+    <path d="M12 16h-10v-4h10v-4l6 6-6 6zM32 0v26l-12 6v-6h-12v-8h2v6h10v-18l8-4h-18v8h-2v-10z"></path>
+  </symbol>
+  <symbol viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="signup">
+    <path d="M12 23c0-4.726 2.996-8.765 7.189-10.319 0.509-1.142 0.811-2.411 0.811-3.681 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h12.416c-0.271-0.954-0.416-1.96-0.416-3z"></path>
+    <path d="M23 14c-4.971 0-9 4.029-9 9s4.029 9 9 9c4.971 0 9-4.029 9-9s-4.029-9-9-9zM28 24h-4v4h-2v-4h-4v-2h4v-4h2v4h4v2z"></path>
+  </symbol>
+  <symbol viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="signout">
+  <path d="M24 20v-4h-10v-4h10v-4l6 6zM22 18v8h-10v6l-12-6v-26h22v10h-2v-8h-16l8 4v18h8v-6z"></path>
+</symbol>
+</svg>

@@ -1,0 +1,80 @@
+body {
+  margin: 0px;
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.08em;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  @include desktop {
+    cursor: none !important;
+  }
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  padding: 0 0;
+  @include desktop {
+    cursor: none !important;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+.main-container {
+  width: 320px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  @include tablet {
+    width: 768px;
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+  @include desktop {
+    width: 1024px;
+    padding-right: 71px;
+    padding-left: 71px;
+  }
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hidden {
+  display: none;
+}

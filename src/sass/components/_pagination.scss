@@ -1,0 +1,64 @@
+.pagination {
+  margin: auto auto 40px;
+  max-width: 280px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  @include tablet() {
+    max-width: 374px;
+  }
+  @include desktop() {
+    max-width: 374px;
+  }
+  &__ellipsis {
+    padding-top: 12px;
+    margin: 0 5px;
+    font-weight: 500;
+    display: none;
+    text-align: center;
+    color: $primary-text-color;
+    // @include tablet() {
+    //   display: block;
+    // }
+    // @include desktop() {
+    //   display: block;
+    // }
+  }
+  &__button {
+    padding-top: 7px;
+    min-width: 40px;
+    height: 40px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+    color: $primary-text-color;
+    &_disabled {
+      pointer-events: none;
+    }
+    &_is-hidden {
+      display: none;
+    }
+    svg {
+      pointer-events: none;
+    }
+    &:first-child,
+    &:last-child {
+      background-color: $button-color;
+      stroke: $primary-text-color;
+    }
+    &:nth-child(5) {
+      background-color: $accent-color;
+    }
+    &:hover {
+      color: $primary-text-color;
+      text-decoration: none;
+      @include desktop() {
+        cursor: pointer;
+        background-color: $accent-color;
+      }
+    }
+  }
+}
+.pagination__button {
+  background-color: #f7f7f7;
+}

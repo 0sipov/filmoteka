@@ -1,0 +1,214 @@
+.popular-title {
+  display: inline-block;
+  padding-top: 20px;
+  margin: 0 auto;
+  color: $accent-color;
+  font-size: 30px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px -1px 0 grey, 1px -1px 0 grey, -1px 1px 0 grey,
+    1px 1px 0 grey;
+
+  &:after {
+    content: attr(popular-title);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    overflow: hidden;
+    color: red;
+    transform: translate(0.4vw, 0.3vh);
+    mix-blend-mode: darken;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 0px 0px grey, 0px 1px 0px blue, 2px 1px 0px grey,
+      1px 2px 0px blue, 3px 2px 0px grey, 2px 3px 0px blue, 4px 3px 0px grey,
+      3px 4px 0px blue, 5px 4px 0px grey, 4px 5px 0px blue, 6px 5px 0px grey,
+      5px 6px 0px blue, 7px 6px 0px grey;
+  }
+}
+
+.main__filmList {
+  padding: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 90px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include desktop {
+    padding-top: 20px;
+    padding-right: 71px;
+    padding-left: 71px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .main__movieItem {
+    // background-color: #f1f1f2;
+    padding: 5px;
+    position: relative;
+    display: block;
+    width: 280px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 467px;
+    cursor: pointer;
+    color: $primary-text-color;
+    background-color: #f7f7f7;
+    box-shadow: 5px 5px 5px -5px rgba(135, 76, 37, 0.6);
+    transition: transform 250ms linear;
+
+    @include tablet {
+      width: 294px;
+    }
+
+    @include desktop {
+      width: 274px;
+    }
+
+    .main__previewImgItem {
+      border-radius: 5px;
+      transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      @include tablet {
+        object-fit: cover;
+        height: 402px;
+      }
+      @include desktop {
+        object-fit: cover;
+        height: 402px;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+      @include tablet {
+        margin-top: 0px;
+      }
+      @include desktop {
+        margin-top: 0px;
+      }
+    }
+    &:nth-child(2n) {
+      @include tablet {
+        margin-left: 30px;
+      }
+      @include desktop {
+        margin-left: 0px;
+      }
+    }
+    &:nth-child(n + 3) {
+      @include tablet {
+        margin-top: 30px;
+      }
+      @include desktop {
+        margin-top: 0px;
+      }
+    }
+    &:not(:nth-child(3n)) {
+      @include desktop {
+        margin-right: 30px;
+      }
+    }
+    &:nth-child(n + 4) {
+      @include desktop {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .main__previewImgTitle {
+    // font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+}
+
+.main__movieItem:hover,
+.main__movieItem:focus {
+  transform: scale(1.04);
+  box-shadow: 0px 0px 18px 0px rgba(135, 76, 37, 1);
+}
+
+.main__movieItem:hover .main__previewImgItem {
+  filter: grayscale(100%) brightness(50%);
+  // blur(2px);
+}
+
+.main__movieItem:hover .main__previewInfoBlock {
+  transform: translateX(5%);
+}
+
+.main__homePage {
+  padding-bottom: 60px;
+}
+
+.main__previewInfoBlock {
+  width: 230px;
+
+  padding: 10px;
+  background: rgba(255, 245, 215, 0.7);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 35%;
+  right: 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateX(-110%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main__previewInfoBlock:hover,
+.main__previewInfoBlock:focus {
+  transform: translateX(110%);
+}
+
+.minicard__title,
+.minicard__description {
+  font-size: small;
+  margin: 1px;
+}
+
+.minicard__title,
+.text__orange {
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  color: $accent-color;
+  background-color: rgba(32, 32, 32, 0.7);
+  width: auto;
+  height: 16px;
+}
+
+.main__previewTitleContainer {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: 55px;
+}

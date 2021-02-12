@@ -1,0 +1,387 @@
+.blocked-scroll {
+    overflow: hidden;
+}
+
+.details-container {
+    // &.hidden {
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   pointer-events: none;
+    // }
+    // position: fixed;
+    // display: flex;
+    // justify-content: center;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    // z-index: 100;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    // top: 0;
+    // width: 100%;
+    // height: 100%;
+    // background-color: rgba(0, 0, 0, 0.8);
+    // transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    //   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include for-size(tablet-landscape-up) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @include for-size(desktop) {
+        padding-top: 100px;
+        padding-bottom: 0px;
+    }
+}
+
+.details-container.hidden .details-wrapper {
+    transform: scale(0.4);
+}
+
+.details-wrapper {
+    width: 280px;
+    height: fit-content;
+    position: relative;
+    background-color: #f1f1f1;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include for-size(tablet-landscape-up) {
+        display: flex;
+        width: 80%;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 440px;
+        border-radius: 4px;
+    }
+    @include for-size(desktop) {
+        display: inline-flex;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    @media (min-width: 1024px) {
+        height: 520px;
+    }
+}
+
+.details-information {
+    width: 100%;
+    background-color: #f1f1f2;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    overflow-y: auto;
+    // overflow: scroll;
+    @include for-size(tablet-landscape-up) {
+        padding: 20px 30px;
+    }
+    @include for-size(desktop) {
+        height: 420px;
+    }
+    @media (min-width: 1024px) {
+        height: 485px;
+    }
+}
+
+.details-img {
+    width: 280px;
+    height: 416px;
+    margin-bottom: 30px;
+    #js-previewImg {
+        object-fit: cover;
+    }
+    @include for-size(tablet-landscape-up) {
+        border-radius: 5px;
+        height: 416px;
+        // margin-right: 10px;
+        margin-bottom: 0;
+        margin-left: 3px;
+    }
+    @include for-size(desktop) {
+        margin-left: 10px;
+        width: 426px;
+        height: 475px;
+    }
+}
+
+.details-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    &-secondary {
+        position: relative;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $primary-text-color;
+        margin-bottom: 15px;
+        cursor: pointer;
+        display: inline-block;
+        padding: 3px 5px;
+        border: 1px solid #000000;
+        border-radius: 2px;
+        transition: border-color 150ms linear, color 150ms linear, background-color 150ms linear;
+    }
+    &-secondary:hover {
+        border-color: $accent-color;
+        color: $primary-white-color;
+        background-color: $accent-color;
+    }
+}
+
+.details-title-secondary+.details-title-secondary {
+    margin-left: 30px;
+}
+
+.details-title-secondary.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+    animation-name: animationName;
+    animation-duration: 3500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animationName {
+    0% {
+        transform: scalex(0);
+    }
+    50% {
+        transform: scalex(1.2);
+    }
+    100% {
+        transform: scalex(0);
+    }
+}
+
+.details-inf {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    &-list {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        color: #8c8c8c;
+        @include for-size(tablet-landscape-up) {
+            font-size: 12px;
+        }
+    }
+    &-list:not(:last-child) {
+        margin-right: 10px;
+        @include for-size(desktop) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.details-inf-list-secondary {
+    color: $primary-text-color;
+}
+
+.movie-trailer {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    margin-bottom: 40px;
+}
+
+.movie-trailer iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.movie-trailer.is-hidden {
+    display: none;
+}
+
+.details-text {
+    display: inline-block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: $primary-text-color;
+    margin-bottom: 40px;
+    &.is-hidden {
+        display: none;
+    }
+}
+
+.text-orange {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $accent-color;
+    width: 36px;
+    height: 16px;
+}
+
+.details-button-list {
+    display: flex;
+    justify-content: center;
+    @include for-size(tablet-landscape-up) {
+        justify-content: flex-start;
+    }
+}
+
+.details-button {
+    margin-right: 10px;
+    width: 100px;
+    height: 44px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    border: 1px solid #000000;
+    @include for-size(tablet-landscape-up) {
+        width: 136px;
+    }
+}
+
+.button-is-active {
+    background-color: $accent-color;
+    border: none;
+    color: $button-color;
+}
+
+.details-inf-list>li {
+    margin-bottom: 5px;
+    height: 32px;
+    @include for-size(desktop) {
+        height: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.details-inf-list>li {
+    margin-bottom: 5px;
+    height: 32px;
+    @include for-size(desktop) {
+        height: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.details-inf-list>li:last-child {
+    margin-bottom: 0;
+}
+
+.details-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    fill: $button-color;
+}
+
+.button-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: $accent-color;
+}
+
+.button-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: $accent-color;
+    border-radius: 2px;
+}
+
+.tabs-container {
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs li:not(:last-child) {
+    margin-right: 7px;
+}
+
+.tabs li a {
+    font-weight: bolder;
+    font-size: 12px;
+    color: black;
+    display: block;
+    position: relative;
+    top: 4px;
+    padding: 10px 25px;
+    border-radius: 2px 2px 0 0;
+    background: white;
+    opacity: 0.7;
+    transition: all 0.1s ease-in-out;
+}
+
+.tabs li.active a,
+.tabs li a:hover {
+    color: $accent-color;
+    font-weight: bolder;
+    opacity: 1;
+    top: 0;
+}
+
+.tabs-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 0 4px 4px 4px;
+    background: white;
+}
+
+.tabs-panel {
+    display: none;
+    font-size: 12px;
+}
+
+.tabs-panel.active {
+    display: block;
+}
+
+.tabs-panel p+div {
+    margin-top: 15px;
+}

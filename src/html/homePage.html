@@ -1,0 +1,78 @@
+<!--Home Page-->
+<section id="js-homePage" class="main__homePage">
+  <section class="carousel">
+    <span id="popular-title" class="popular-title">Popular movies</span>
+    <div class="slider-container">
+      <div class="slider-arrows">
+        <div class="slider-arrow-left arrowLeft">
+          <svg width="16" height="30" class="svg-arrow">
+            <polyline
+              style="
+                stroke-linejoin: miter;
+                stroke: #00275a;
+                stroke-width: 3;
+                fill: none;
+              "
+              points="15 2, 2 15, 15 28"
+            />
+          </svg>
+        </div>
+        <div class="slider-arrow-right arrowRight">
+          <svg width="16" height="30" class="svg-arrow">
+            <polyline
+              style="
+                stroke-linejoin: miter;
+                stroke: #00275a;
+                stroke-width: 3;
+                fill: none;
+              "
+              points="2 2, 14 15, 2 28"
+            />
+          </svg>
+        </div>
+      </div>
+      <div id="frame">
+        <div id="slider"></div>
+      </div>
+    </div>
+  </section>
+  <ul id="js-moviesList" class="main__filmList"></ul>
+  <div class="pagination">
+    <a
+      class="pagination__button pagination__button_disabled"
+      data-index="left"
+      href="#!"
+      ><svg class="icon" width="16" height="16">
+        <use href="./images/sprite.svg#arrowleft"></use>
+      </svg>
+    </a>
+    <a
+      class="pagination__button pagination__number pagination__button_disabled pagination__button_is-hidden"
+      data-index="1"
+      href="#!"
+    >
+    </a>
+    <span class="pagination__ellipsis">...</span>
+    <a
+      class="pagination__button pagination__number pagination__button_disabled pagination__button_is-hidden"
+      data-index="2"
+      href="#!"
+    >
+    </a>
+    <a class="pagination__button pagination__number" data-index="3" href="#!"
+      >1</a
+    >
+    <a class="pagination__button pagination__number" data-index="4" href="#!"
+      >2</a
+    >
+    <span class="pagination__ellipsis">...</span>
+    <a class="pagination__button pagination__number" data-index="5" href="#!"
+      >3</a
+    >
+    <a class="pagination__button" data-index="right" href="#!"
+      ><svg class="icon" width="16" height="16">
+        <use href="./images/sprite.svg#arrowright"></use>
+      </svg>
+    </a>
+  </div>
+</section>

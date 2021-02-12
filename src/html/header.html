@@ -1,0 +1,126 @@
+<!--Header-->
+<header class="header" style="background-color: black; height: 230px">
+  <div class="header-container main-container">
+    <div class="dark-theme-switcher">
+      <div class="theme-switch">
+        <svg class="theme-switch__icon_sun" width="24" height="24">
+          <use href="./images/sprite-2.svg#icon-sun-icon"></use>
+        </svg>
+        <div class="theme-switch__control">
+          <input
+            class="theme-switch__toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="Dark-light switcher"
+          />
+          <label
+            aria-hidden="true"
+            class="theme-switch__track"
+            for="theme-switch-toggle"
+          >
+          </label>
+          <div aria-hidden="true" class="theme-switch__marker"></div>
+        </div>
+        <svg class="theme-switch__icon_moon" width="24" height="24">
+          <use href="./images/sprite-2.svg#icon-moon-icon"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="logo-container">
+      <a href="#" class="link-logo link">
+        <svg class="icon-logo" width="24" height="24">
+          <use href="./images/symbol-defs.svg#icon-film-header"></use>
+        </svg>
+        <span
+          class="text-logo"
+          style="
+            margin-left: 12px;
+            font-weight: 500;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+          "
+        >
+          Filmoteka</span
+        ></a
+      >
+
+      <nav class="navigation">
+        <ul class="header-list" style="display: flex; list-style: none">
+          <li class="header-list-item">
+            <a
+              href="#"
+              class="link-header current"
+              id="home"
+              style="color: white"
+              >HOME</a
+            >
+          </li>
+          <li class="header-list-item link">
+            <a
+              href="#"
+              class="link-library"
+              id="my-library"
+              style="
+                background-color: transparent;
+                display: block;
+                color: white;
+              "
+            >
+              MY LIBRARY
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- </button> -->
+      <button class="button_registration button_form" type="button">
+        <svg class="button-icon">
+          <use href="./images/sprite.svg#signup"></use>
+        </svg>
+      </button>
+      <div class="form_buttons">
+        <button class="button_logIn button_form" type="button">
+          <svg class="button-icon">
+            <use href="./images/sprite.svg#login"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <form
+      id="js-form"
+      class="search-box"
+      action="submit"
+      style="text-align: center"
+    >
+      <input
+        type="text"
+        id="search"
+        class="search-input"
+        placeholder="Search the film"
+        style="
+          background: transparent;
+          border: none;
+          border-bottom: 0.5px solid #ffffff;
+          outline: none;
+        "
+      />
+      <svg class="icon-search" width="12" height="12">
+        <use href="./images/symbol-defs.svg#icon-search-header"></use>
+      </svg>
+    </form>
+    <p class="error-message"></p>
+    <div class="my-library-header-div hidden">
+      <ul class="my-library">
+        <li>
+          <button class="library-button button-active" id="watched">
+            Watched
+          </button>
+        </li>
+        <li>
+          <button class="library-button queue-button" id="queue">Queue</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

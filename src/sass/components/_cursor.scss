@@ -1,0 +1,15 @@
+.cursor {
+    @include desktop {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        transform: translate(-90%, -50%);
+        pointer-events: none;
+        z-index: 10000000;
+        cursor: none;
+    }
+}
+
+.cursor-n {
+    display: none;
+}

@@ -1,0 +1,41 @@
+<div class="form-modal hidden">
+  <div class="form-wrapper">
+    <button class="form-button-close">
+      <svg class="form-close">
+        <use href="./images/symbol-defs.svg#close"></use>
+      </svg>
+    </button>
+    <form class="registration hidden">
+      <h2>Registration</h2>
+      <label for="reg-email">E-mail</label>
+      <input name="reg-email" class="mail" type="mail" />
+      <label for="reg-pass">Password</label>
+      <input name="reg-pass" class="pass" type="password" />
+      <button class="register-button" type="submit">Register</button>
+    </form>
+    <form class="logIn hidden">
+      <h2>LogIn</h2>
+      <label for="log-email">E-mail</label>
+      <input name="log-email" class="mail" type="mail" />
+      <label for="log-pass">Password</label>
+      <input name="log-pass" class="pass" type="password" />
+      <button class="log-in-button" type="submit">Log In</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+    <script>
+      //Config
+      var firebaseConfig = {
+        apiKey: 'AIzaSyB5qrzdmfAe847rQauzTKPf0UazgyDkRvk',
+        authDomain: 'filmoteka-99806.firebaseapp.com',
+        databaseURL: 'https://filmoteka-99806-default-rtdb.firebaseio.com',
+        projectId: 'filmoteka-99806',
+        storageBucket: 'filmoteka-99806.appspot.com',
+        messagingSenderId: '436032791506',
+        appId: '1:436032791506:web:792469e5d115a5925fde0b',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </div>
+</div>
